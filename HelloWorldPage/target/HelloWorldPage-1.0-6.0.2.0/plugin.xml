@@ -1,0 +1,41 @@
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.jivesoftware.com/schemas/clearspace/2_5/plugin.xsd">
+    <name>helloworldpage</name>
+    <description>HelloWorldPage</description>
+    <author></author>
+    <version>1.0.0</version>
+    <minServerVersion>6.0.0.0</minServerVersion>
+    <maxServerVersion>6.0.9.9</maxServerVersion>
+    
+	<!-- you will want to change your class name here! -->
+
+	<!-- 
+    <authorURL>
+    <pluginURL>
+    <databaseKey>
+    <databaseVersion>
+    <components>
+    <css>
+    <soy>
+    <javascript>
+    <widget>
+    <macro>
+    <urlmapping>
+    <sitemesh>
+	-->
+    <sitemesh>
+        <decorator name="default" page="template.ftl">
+            <pattern>/helloworld/*</pattern>
+        </decorator>
+        <decorator name="default" page="template.ftl">
+            <pattern>/helloworld*</pattern>
+        </decorator>
+        <decorator name="default" page="header-clickjacking-prevent.ftl">
+            <pattern>/helloworld/*</pattern>
+        </decorator>
+        <decorator name="default" page="header-clickjacking-prevent.ftl">
+            <pattern>/helloworld*</pattern>
+        </decorator>
+
+    </sitemesh>
+</plugin>

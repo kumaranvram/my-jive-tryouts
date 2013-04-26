@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+       default-autowire="no" default-init-method="init" default-destroy-method="destroy">
+
+
+    <bean id="helloWorldLink" class="com.musigma.mulearn.link.HelloWorldLink" parent="actionLinkBase" scope="prototype">
+        <property name="ID" value="jive-nav-link-move-content"/>
+        <property name="nameKey" value="Featured Content"/>
+        <property name="itemCss" value="quicklinks-nav-menu-item"/>
+        <property name="linkCss" value="j-globalNavLink j-ui-elem"/>
+        <property name="iconCss" value="quicklinks-nav-menu-icon"/>
+    </bean>
+
+    <bean id="idHelloWorldAction" class="com.musigma.mulearn.action.HelloWorldLinkAction" />
+
+    <bean id="idSpringAppContext" class="com.musigma.mulearn.SpringAppContext" />
+
+    <bean id="quickLinksNavBarLinks" class="com.jivesoftware.community.util.spring.MergeableCollection" scope="prototype" parent="navBarLinks">
+        <property name="source">
+            <util:list value-type="com.jivesoftware.community.web.component.ActionLink" scope="prototype">
+                <ref bean="helloWorldLink"/>
+            </util:list>
+        </property>
+    </bean>
+</beans>
+

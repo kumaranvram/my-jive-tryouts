@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <mkdir dir="/Users/kumaran/Work/plugins/HelloWorldPage/target/HelloWorldPage-1.0-6.0.2.0"/>
+  <unjar dest="/Users/kumaran/Work/plugins/HelloWorldPage/target/HelloWorldPage-1.0-6.0.2.0" src="/Users/kumaran/Work/plugins/HelloWorldPage/target/HelloWorldPage-1.0-6.0.2.0.jar"/>
+</target>
+</project>
